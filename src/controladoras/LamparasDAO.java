@@ -10,7 +10,7 @@ public class LamparasDAO {
     
     //Todos los datos de las lámparas en un Vector
     public static Vector vLamparas = new Vector(100,5);
-   public static ArrayList<Reporte> reporte = new ArrayList<Reporte>();
+    public static ArrayList<Reporte> reporte = new ArrayList<Reporte>();
     
 // Datos mínimos del primer modelo
     public static String modelo0 = "MEDUSA";
@@ -48,33 +48,31 @@ public class LamparasDAO {
     public static int nluces4 = 3; 
  
 // Porcentajes de descuento 
-public static double porcentaje1 = 0.01;
-public static double porcentaje2 = 0.02;
-public static double porcentaje3 = 0.03;
-public static double porcentaje4 = 0.04;  
+    public static double porcentaje1 = 0.01;
+    public static double porcentaje2 = 0.02;
+    public static double porcentaje3 = 0.03;
+    public static double porcentaje4 = 0.04;  
 // Cantidad óptima de lámparas vendidas 
-public static int cantidadOptima = 50; 
+    public static int cantidadOptima = 50; 
  
 // Modelo para el cual se otorga el obsequio 
-public static int modeloObsequiable = 2; 
+    public static int modeloObsequiable = 2; 
  
 // Cantidad mínima de lámparas adquiridas para obtener el obsequio 
-public static int cantidadMinimaObsequiable = 20; 
+    public static int cantidadMinimaObsequiable = 20; 
  	 
 // Obsequio 
-public static String obsequio = "USB"; 
+    public static String obsequio = "USB"; 
  
 // Número de cliente que recibe el premio sorpresa public static int numeroClienteSorpresa = 5; 
  
 // Premio sorpresa 
-public static String premioSorpresa = "Una agenda"; 
+    public static String premioSorpresa = "Una agenda"; 
  
-public static void guardarventas(Reporte reporte){   
+    public static void guardarventas(Reporte reporte){   
 
 }
-
-     
-     
+ 
     public static void pCargarDatosLamparasAlVector(){
         //Son 5 modelos de lámparas
         //La primera lámpara

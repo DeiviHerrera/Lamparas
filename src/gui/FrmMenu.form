@@ -92,16 +92,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Configurar obsequio "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mn_obsequioActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mn_cantidadOptima">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Configurar cantidad &#xf3;ptima de l&#xe1;mparas vendidas "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mn_cantidadOptimaActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mn_precioSorpresa">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Configurar premio sorpresa "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mn_precioSorpresaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

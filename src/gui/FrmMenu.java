@@ -124,12 +124,27 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenu4.add(mn_descuento);
 
         mn_obsequio.setText("Configurar obsequio ");
+        mn_obsequio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mn_obsequioActionPerformed(evt);
+            }
+        });
         jMenu4.add(mn_obsequio);
 
         mn_cantidadOptima.setText("Configurar cantidad óptima de lámparas vendidas ");
+        mn_cantidadOptima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mn_cantidadOptimaActionPerformed(evt);
+            }
+        });
         jMenu4.add(mn_cantidadOptima);
 
         mn_precioSorpresa.setText("Configurar premio sorpresa ");
+        mn_precioSorpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mn_precioSorpresaActionPerformed(evt);
+            }
+        });
         jMenu4.add(mn_precioSorpresa);
 
         jMenuBar1.add(jMenu4);
@@ -202,6 +217,27 @@ public class FrmMenu extends javax.swing.JFrame {
        descuento.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_mn_descuentoActionPerformed
+
+    private void mn_obsequioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_obsequioActionPerformed
+          JFrame obsequio = new FrmObsequio();
+       obsequio.setLocationRelativeTo(obsequio);
+       obsequio.setVisible(true);
+               // TODO add your handling code here:
+    }//GEN-LAST:event_mn_obsequioActionPerformed
+
+    private void mn_cantidadOptimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_cantidadOptimaActionPerformed
+        JFrame cantidadoptima = new FrmCantidadOptima();
+       cantidadoptima.setLocationRelativeTo(cantidadoptima);
+       cantidadoptima.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mn_cantidadOptimaActionPerformed
+
+    private void mn_precioSorpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_precioSorpresaActionPerformed
+        JFrame precioSorpresa = new FrmPremioSorpreso();
+       precioSorpresa.setLocationRelativeTo(precioSorpresa);
+       precioSorpresa.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mn_precioSorpresaActionPerformed
 
     /**
      * @param args the command line arguments
