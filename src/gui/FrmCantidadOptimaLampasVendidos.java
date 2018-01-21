@@ -1,27 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gui;
 
 import controladoras.LamparasDAO;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Administrador
- */
-public class FrmPremioSorpreso extends javax.swing.JFrame {
+
+public class FrmCantidadOptimaLampasVendidos extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmPremioSorpreso
+     * Creates new form FrmCantidadOptima
      */
-    public FrmPremioSorpreso() {
+    public FrmCantidadOptimaLampasVendidos() {
         initComponents();
+         
+        txt_cantidadoptimasvendidas.setText(LamparasDAO.cantidadOptima+"");
         
-        txt_premiosorpresa.setText(LamparasDAO.premioSorpresa);
-        txt_numeroclientes.setText(LamparasDAO.numerocliente+"");
     }
 
     /**
@@ -33,16 +26,12 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txt_numeroclientes = new javax.swing.JTextField();
         btn_grabar = new javax.swing.JButton();
         btn_cerar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txt_premiosorpresa = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        txt_cantidadoptimasvendidas = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        txt_numeroclientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
         btn_grabar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_grabar.setText("Grabar");
@@ -61,12 +50,9 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Numero de Clientes");
+        jLabel2.setText("Cantidad Optimas de lamparas vendidas");
 
-        txt_premiosorpresa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Premio Sorpresa");
+        txt_cantidadoptimasvendidas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,38 +60,29 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
-                .addGap(0, 54, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_numeroclientes, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                    .addComponent(txt_premiosorpresa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(37, 37, 37)
+                .addComponent(txt_cantidadoptimasvendidas, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_grabar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_cerar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txt_numeroclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txt_premiosorpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_cerar)
-                        .addGap(32, 32, 32)
-                        .addComponent(btn_grabar)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txt_cantidadoptimasvendidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_cerar)
+                .addGap(32, 32, 32)
+                .addComponent(btn_grabar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,10 +90,11 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
 
     private void btn_grabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_grabarActionPerformed
 
-        LamparasDAO.premioSorpresa=txt_premiosorpresa.getText();
-        LamparasDAO.numerocliente=Integer.parseInt(txt_numeroclientes.getText());
+        LamparasDAO.cantidadOptima=Integer.parseInt(txt_cantidadoptimasvendidas.getText());
+       
 
         JOptionPane.showMessageDialog(this,"Grabo con exito");
+
     }//GEN-LAST:event_btn_grabarActionPerformed
 
     private void btn_cerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cerarActionPerformed
@@ -141,20 +119,21 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmPremioSorpreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCantidadOptimaLampasVendidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmPremioSorpreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCantidadOptimaLampasVendidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmPremioSorpreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCantidadOptimaLampasVendidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmPremioSorpreso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCantidadOptimaLampasVendidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmPremioSorpreso().setVisible(true);
+                new FrmCantidadOptimaLampasVendidos().setVisible(true);
             }
         });
     }
@@ -163,8 +142,6 @@ public class FrmPremioSorpreso extends javax.swing.JFrame {
     private javax.swing.JButton btn_cerar;
     private javax.swing.JButton btn_grabar;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txt_numeroclientes;
-    private javax.swing.JTextField txt_premiosorpresa;
+    private javax.swing.JTextField txt_cantidadoptimasvendidas;
     // End of variables declaration//GEN-END:variables
 }

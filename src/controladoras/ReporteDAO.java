@@ -132,13 +132,87 @@ public class ReporteDAO {
     public static void preciosmaximosyminimos(JTextArea elArea) {
          elArea.setText("");
         
-        double promedio = (LamparasDAO.precio0+LamparasDAO.precio1+LamparasDAO.precio2+
+        double promedioprecios = (LamparasDAO.precio0+LamparasDAO.precio1+LamparasDAO.precio2+
                     LamparasDAO.precio3+LamparasDAO.precio4)/5; 
+        
+        double promediopotencia = (LamparasDAO.potencia0+LamparasDAO.potencia1+LamparasDAO.potencia2+
+                    LamparasDAO.potencia3+LamparasDAO.potencia4)/5; 
+        
+        double p0= LamparasDAO.precio0;
+        double p1= LamparasDAO.precio1;
+        double p2= LamparasDAO.precio2;
+        double p3= LamparasDAO.precio3;
+        double p4= LamparasDAO.precio4;
+        
+        double pt0= LamparasDAO.potencia0;
+        double pt1= LamparasDAO.potencia1;
+        double pt2= LamparasDAO.potencia2;
+        double pt3= LamparasDAO.potencia3;
+        double pt4= LamparasDAO.potencia4;
+        
+       
         
             elArea.append("\n");
             elArea.append("\n");
-            elArea.append("\n Precio promedio\t: "+promedio);
-            
+            elArea.append("\n Precio promedio \t: "+promedioprecios);          
+        double preciomayor=p0;
+        if(p1>preciomayor)
+            preciomayor=p1;
+        if(p2>preciomayor)
+            preciomayor=p2;
+        if(p3>preciomayor)
+            preciomayor=p3;
+        if(p3>preciomayor)
+            preciomayor=p3;
+        if(p4>preciomayor)
+            preciomayor=p4;
+        elArea.append("\n Precio maximo \t: "+preciomayor);
+        
+         double preciomimino=p0;
+        if(p1<preciomimino)
+            preciomimino=p1;
+        if(p2<preciomimino)
+            preciomimino=p2;
+        if(p3<preciomimino)
+            preciomimino=p3;
+        if(p3<preciomimino)
+            preciomimino=p3;
+        if(p4<preciomimino)
+            preciomimino=p4;
+        elArea.append("\n Precio minimo \t: "+preciomimino);
+        
+            elArea.append("\n");
+            elArea.append("\n");
+            elArea.append("\n Potencia promedio \t: "+promediopotencia);          
+        double potenciamayor=pt0;
+        if(pt1>potenciamayor)
+            potenciamayor=pt1;
+        if(pt2>potenciamayor)
+            potenciamayor=pt2;
+        if(pt3>potenciamayor)
+            potenciamayor=pt3;
+        if(pt3>potenciamayor)
+            potenciamayor=pt3;
+        if(pt4>potenciamayor)
+            potenciamayor=pt4;
+        elArea.append("\n Potencia maximo \t: "+potenciamayor);
+        
+         double potenciamimino=pt0;
+        if(pt1<potenciamimino)
+            potenciamimino=pt1;
+        if(pt2<potenciamimino)
+            potenciamimino=pt2;
+        if(pt3<potenciamimino)
+            potenciamimino=pt3;
+        if(pt3<potenciamimino)
+            potenciamimino=pt3;
+        if(pt4<potenciamimino)
+            potenciamimino=pt4;
+        elArea.append("\n Potencia minimo \t: "+potenciamimino);
+       
+        
+         
+       
         
     }
 }

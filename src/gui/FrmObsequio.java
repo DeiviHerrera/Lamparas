@@ -5,17 +5,32 @@
  */
 package gui;
 
-/**
- *
- * @author Administrador
- */
+import controladoras.LamparasDAO;
+import javax.swing.JOptionPane;
+import jdk.nashorn.internal.scripts.JO;
+import modelos.Lamparas;
+
+
 public class FrmObsequio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmObsequio
-     */
+    public void pCargarModelosAlCombo(){
+        int cantElemVector =  LamparasDAO.vLamparas.size();
+        
+        for(int x = 0; x < cantElemVector; x++){
+            Lamparas objRecueprado = new Lamparas();//Está vacío
+            objRecueprado = (Lamparas) LamparasDAO.vLamparas.elementAt(x);
+            
+            cbo_modelo.addItem(  objRecueprado.getModelo()  );
+        }
+        }
+    
+    
     public FrmObsequio() {
         initComponents();
+        
+        pCargarModelosAlCombo();
+        txt_cantidadminima.setText(LamparasDAO.cantidadMinimaObsequiable+"");
+        txt_obsequio.setText(LamparasDAO.obsequio);
     }
 
     /**
@@ -27,21 +42,123 @@ public class FrmObsequio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_cerar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        cbo_modelo = new javax.swing.JComboBox<>();
+        txt_cantidadminima = new javax.swing.JTextField();
+        txt_obsequio = new javax.swing.JTextField();
+        btn_grabar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Modificar Lámpara");
+
+        btn_cerar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btn_cerar.setText("Cerrar");
+        btn_cerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cerarActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Modelo");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Cantidad Minima");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Obsequio");
+
+        cbo_modelo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cbo_modelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbo_modeloActionPerformed(evt);
+            }
+        });
+
+        txt_cantidadminima.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+
+        txt_obsequio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+
+        btn_grabar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btn_grabar.setText("Grabar");
+        btn_grabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_grabarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbo_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_cantidadminima, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(89, 89, 89)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btn_cerar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_grabar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txt_obsequio, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(cbo_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txt_cantidadminima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_obsequio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(btn_cerar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_grabar)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_cerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cerarActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btn_cerarActionPerformed
+
+    private void cbo_modeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_modeloActionPerformed
+    
+       
+    }//GEN-LAST:event_cbo_modeloActionPerformed
+
+    private void btn_grabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_grabarActionPerformed
+       
+       LamparasDAO.cantidadMinimaObsequiable=Integer.parseInt(txt_cantidadminima.getText());
+       LamparasDAO.obsequio=txt_obsequio.getText();
+       LamparasDAO.modeloObsequiable=cbo_modelo.getSelectedItem().toString();
+        
+        JOptionPane.showMessageDialog(this,"Grabo con exito");
+    }//GEN-LAST:event_btn_grabarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,6 +186,21 @@ public class FrmObsequio extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FrmObsequio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +211,13 @@ public class FrmObsequio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cerar;
+    private javax.swing.JButton btn_grabar;
+    private javax.swing.JComboBox<String> cbo_modelo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txt_cantidadminima;
+    private javax.swing.JTextField txt_obsequio;
     // End of variables declaration//GEN-END:variables
 }

@@ -226,7 +226,7 @@ public class FrmMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_mn_obsequioActionPerformed
 
     private void mn_cantidadOptimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_cantidadOptimaActionPerformed
-        JFrame cantidadoptima = new FrmCantidadOptima();
+        JFrame cantidadoptima = new FrmCantidadOptimaLampasVendidos();
        cantidadoptima.setLocationRelativeTo(cantidadoptima);
        cantidadoptima.setVisible(true);
         // TODO add your handling code here:

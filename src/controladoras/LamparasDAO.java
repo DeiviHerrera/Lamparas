@@ -56,13 +56,16 @@ public class LamparasDAO {
     public static int cantidadOptima = 50; 
  
 // Modelo para el cual se otorga el obsequio 
-    public static int modeloObsequiable = 2; 
+    public static String modeloObsequiable = "KEFREN"; 
  
 // Cantidad mínima de lámparas adquiridas para obtener el obsequio 
     public static int cantidadMinimaObsequiable = 20; 
  	 
 // Obsequio 
     public static String obsequio = "USB"; 
+    
+    // numero cliente 
+    public static int numerocliente = 5; 
  
 // Número de cliente que recibe el premio sorpresa public static int numeroClienteSorpresa = 5; 
  

@@ -22,7 +22,7 @@ public class VentasDAO {
         if (LamparasDAO.contador % 5==0) {
             elArea.append("\n Premio \t:" +LamparasDAO.premioSorpresa);
         }
-       elArea.append("\n numero de venta \t:" +LamparasDAO.contador);
+      // elArea.append("\n numero de venta \t:" +LamparasDAO.contador);
        
     Reporte unreporte;
     
