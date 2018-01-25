@@ -19,7 +19,7 @@ public class FrmMenu extends javax.swing.JFrame {
      */
     public FrmMenu() {
         initComponents();
-        
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         LamparasDAO.pCargarDatosLamparasAlVector(); 
         
         
@@ -152,6 +152,11 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenu5.setText("Ayuda");
 
         jMenuItem12.setText("Acerca de Tienda ");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem12);
 
         jMenuBar1.add(jMenu5);
@@ -238,6 +243,14 @@ public class FrmMenu extends javax.swing.JFrame {
        precioSorpresa.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_mn_precioSorpresaActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        JFrame tienda = new FrmTienda();
+       tienda.setLocationRelativeTo(tienda);
+       tienda.setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     /**
      * @param args the command line arguments

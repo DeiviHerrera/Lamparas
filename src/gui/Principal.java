@@ -12,7 +12,7 @@ public class Principal {
         // Código personal para llamar a un formulario
         JFrame frame = new FrmMenu();
         
-        frame.setSize(1204, 768);
+       // frame.setSize(1204, 768);
         
         
         //Centrado
@@ -20,10 +20,10 @@ public class Principal {
         frame.setVisible(true);
         
            
-        frame.setVisible(true);
+       /* frame.setVisible(true);
         Dimension dim = frame.getToolkit().getScreenSize();
         frame.setLocationRelativeTo(frame);
-        frame.setSize(dim);
+        frame.setSize(dim);*/
         
         
         //Activa la carga de los datos al vector

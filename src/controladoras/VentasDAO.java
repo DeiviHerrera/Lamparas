@@ -48,7 +48,7 @@ public class VentasDAO {
         double total = importe-descuento;
            elArea.append("\n Total \t:   "+total);
            
-       if(cantidad>=LamparasDAO.cantidadMinimaObsequiable && modelo.equalsIgnoreCase("KEFREN")){
+       if(cantidad>=LamparasDAO.cantidadMinimaObsequiable && modelo.equalsIgnoreCase(LamparasDAO.modeloObsequiable)){
            elArea.append("\n Obsequio \t:     "+LamparasDAO.obsequio);
             unreporte = new Reporte(modelo, cantidad, precio, importe, descuento, total, LamparasDAO.obsequio);
        } else {
