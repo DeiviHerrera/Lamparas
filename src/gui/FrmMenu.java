@@ -43,6 +43,7 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        mnAgregar = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -93,6 +94,14 @@ public class FrmMenu extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem4);
+
+        mnAgregar.setText("Agregar lampara");
+        mnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnAgregarActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnAgregar);
 
         jMenuBar1.add(jMenu2);
 
@@ -255,6 +264,12 @@ public class FrmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void mnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAgregarActionPerformed
+        JFrame agregar = new FrmAgregar();
+        agregar.setLocationRelativeTo(agregar);
+        agregar.setVisible(true);
+    }//GEN-LAST:event_mnAgregarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -309,6 +324,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem mnAgregar;
     private javax.swing.JMenuItem mn_cantidadOptima;
     private javax.swing.JMenuItem mn_descuento;
     private javax.swing.JMenuItem mn_obsequio;

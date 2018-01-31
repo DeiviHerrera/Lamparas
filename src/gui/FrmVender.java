@@ -187,19 +187,17 @@ public class FrmVender extends javax.swing.JFrame {
     private void btn_venderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_venderActionPerformed
 
         int cantidad = Integer.parseInt(txt_cantidad.getText());
-         String modelo = cbo_modelo.getSelectedItem().toString();
+        String modelo = cbo_modelo.getSelectedItem().toString();
         double precio = Double.parseDouble(txt_precio.getText());
         double importe = (cantidad*precio);
         double descuento = 0; 
         int nromodelo=cbo_modelo.getSelectedIndex();
-         int posicion;
-          posicion = cbo_modelo.getSelectedIndex();
+        int posicion;
+        posicion = cbo_modelo.getSelectedIndex();
         
         
-           Lamparas obj1 = new Lamparas();
-    
-        
-        obj1.setPrecio(precio);
+        Lamparas obj1 = new Lamparas();
+         obj1.setPrecio(precio);
        
         
     VentasDAO.ventas(txt_salida, cantidad, modelo, importe, precio, descuento,nromodelo);

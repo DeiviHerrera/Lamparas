@@ -11,10 +11,10 @@ public class FrmDescuentos extends javax.swing.JFrame {
     public FrmDescuentos() {
         initComponents();
         
-          txt_1a5lamaparas.setText(LamparasDAO.porcentaje1*100+"");
-          txt_5a10lamaparas.setText(LamparasDAO.porcentaje2*100+"");
-          txt_11a15lamaparas.setText(LamparasDAO.porcentaje3*100+"");
-          txt_15amaslamaparas.setText(LamparasDAO.porcentaje4*100+"");
+          txt_1a5lamaparas.setText((int)LamparasDAO.porcentaje1+"");
+          txt_5a10lamaparas.setText(LamparasDAO.porcentaje2+"");
+          txt_11a15lamaparas.setText(LamparasDAO.porcentaje3+"");
+          txt_15amaslamaparas.setText(LamparasDAO.porcentaje4+"");
         
     }
 

@@ -48,10 +48,10 @@ public class LamparasDAO {
     public static int nluces4 = 3; 
  
 // Porcentajes de descuento 
-    public static double porcentaje1 = 0.01;
-    public static double porcentaje2 = 0.02;
-    public static double porcentaje3 = 0.03;
-    public static double porcentaje4 = 0.04;  
+    public static double porcentaje1 = 1;
+    public static double porcentaje2 = 2;
+    public static double porcentaje3 = 3;
+    public static double porcentaje4 = 4;  
 // Cantidad óptima de lámparas vendidas 
     public static int cantidadOptima = 50; 
  

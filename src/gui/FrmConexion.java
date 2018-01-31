@@ -48,7 +48,7 @@ public class FrmConexion extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel1.setText("SISTEMA DE FACTURACION ");
+        jLabel1.setText("SISTEMA DE LAMPARAS");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("USUARIO");
@@ -77,7 +77,7 @@ public class FrmConexion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
+                .addContainerGap(197, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(99, 99, 99))
             .addGroup(layout.createSequentialGroup()
